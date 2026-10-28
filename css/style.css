@@ -1,0 +1,62 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --card-bg: #f5f5f5;
+}
+
+/* Dark mode variables */
+body.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #2a2a2a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Added round photo style */
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-row {
+    display: flex;
+    gap: 15px; /* Adds gap so cards do not touch */
+    margin: 20px 0;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    flex: 1;
+    border-radius: 8px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Added a hover colour on a card */
+.card:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+body.dark .card:hover {
+    background-color: #444444;
+}
